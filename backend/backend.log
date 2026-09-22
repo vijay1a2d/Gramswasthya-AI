@@ -1,0 +1,261 @@
+INFO:     Will watch for changes in these directories: ['/Users/shiva/Desktop/gramswasthya/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [44452] using WatchFiles
+INFO:     Started server process [44500]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:59415 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59417 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:     127.0.0.1:59431 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59436 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59486 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59489 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59504 - "PUT /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59507 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59550 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59552 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59604 - "PUT /api/patients/profile/me HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: users.phone
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 74, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 42, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/routes/patients.py", line 106, in update_my_profile
+    db.commit()
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4431, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 85, in save_obj
+    _emit_update_statements(
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 912, in _emit_update_statements
+    c = connection.execute(
+        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/shiva/Desktop/gramswasthya/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.phone
+[SQL: UPDATE users SET phone=?, email=?, village=?, district=?, state=?, updated_at=? WHERE users.id = ?]
+[parameters: ('9876543210', 'lakshmi_test@gmail.com', 'Updated Village', 'Updated District', 'Updated State', '2026-03-14 20:48:14.445986', 'caeed63c-e66a-4235-ab86-b42700e17c4a')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+INFO:     127.0.0.1:59636 - "PUT /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59639 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59666 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59668 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60129 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60132 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60132 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60134 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60137 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60132 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60132 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60141 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60145 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60156 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60158 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60193 - "PUT /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60196 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60208 - "PUT /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60211 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60214 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60217 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60219 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60219 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60223 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60227 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60229 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60229 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60231 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60235 - "GET /api/patients/profile/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60237 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60240 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60243 - "GET /api/cdss/diseases/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60246 - "GET /api/cdss/diseases/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60256 - "GET /api/disease/surveillance/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60257 - "GET /api/disease/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60260 - "GET /api/disease/village-scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60265 - "GET /api/disease/surveillance/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60267 - "GET /api/disease/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60268 - "GET /api/disease/village-scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60276 - "GET /api/disease/surveillance/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60275 - "GET /api/disease/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60277 - "GET /api/disease/village-scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60285 - "GET /api/disease/surveillance/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60284 - "GET /api/disease/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60286 - "GET /api/disease/village-scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60294 - "GET /api/disease/surveillance/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60293 - "GET /api/disease/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60295 - "GET /api/disease/village-scores HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60327 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60330 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60337 - "GET /api/passport/746da33f-1bf6-4a6c-8bc4-8f01f360973c/qr HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60335 - "GET /api/passport/746da33f-1bf6-4a6c-8bc4-8f01f360973c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60349 - "GET /api/passport/b1a737d3-4c02-4b8a-868c-d45eb1a8fb4a/qr HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60348 - "GET /api/passport/b1a737d3-4c02-4b8a-868c-d45eb1a8fb4a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60355 - "GET /api/passport/1ef8728f-5db9-4dcd-85cc-49ec105efdc4/qr HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60353 - "GET /api/passport/1ef8728f-5db9-4dcd-85cc-49ec105efdc4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60365 - "GET /api/doctors/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60366 - "GET /api/appointments/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60367 - "GET /api/hospitals/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60364 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60370 - "GET /api/doctors/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60373 - "GET /api/appointments/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60376 - "GET /api/hospitals/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60379 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60397 - "GET /api/appointments/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60400 - "GET /api/doctors/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60399 - "GET /api/hospitals/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60398 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60402 - "GET /api/appointments/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60406 - "GET /api/doctors/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60407 - "GET /api/hospitals/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60410 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60439 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60439 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60439 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60443 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60447 - "GET /api/patients/?skip=0&limit=50 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'routes/doctors.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [44500]
+WARNING:  WatchFiles detected changes in 'routes/doctors.py'. Reloading...
+INFO:     Started server process [45294]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [45296]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'routes/doctors.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45296]
+INFO:     Started server process [45298]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant Widget Demo</title>
+    
+    <!-- 1. Include the Chatbot CSS -->
+    <link rel="stylesheet" href="./voice-bot-widget.css">
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0fdf4; padding: 40px; color: #334155; }
+        h1 { color: #166534; }
+        .content { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>GramSwasthya Vanilla Integration Demo</h1>
+        <p>This is a regular HTML page.</p>
+        <p>Look at the bottom right corner of the screen! You will see the floating AI Voice Assistant.</p>
+        <p>You can drop this widget into WordPress, plain HTML sites, or any other stack just by including the two files.</p>
+    </div>
+
+    <!-- 2. Include the Chatbot JavaScript -->
+    <script src="./voice-bot-widget.js"></script>
+
+    <!-- 3. Initialize the Bot -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize the voice assistant and point it to your existing GramSwasthya API backend
+            window.myVoiceBot = new GramSwasthyaVoiceBot({
+                apiUrl: 'http://localhost:8000/api/global-assistant/chat',
+                language: 'en-US',          // Web Speech language (e.g., 'te-IN' for Telugu, 'hi-IN' for Hindi)
+                botLanguageName: 'English',  // Tells the backend what language to respond in
+                cssUrl: './voice-bot-widget.css' // Path to the css file
+            });
+        });
+    </script>
+</body>
+</html>

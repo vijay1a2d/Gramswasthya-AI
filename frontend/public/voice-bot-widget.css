@@ -1,0 +1,180 @@
+/* voice-bot-widget.css */
+#gramswasthya-voice-bot-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999999;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+#gramswasthya-bot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#gramswasthya-bot-toggle:hover {
+    transform: scale(1.05);
+    background: #0284c7;
+}
+
+#gramswasthya-bot-toggle svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+}
+
+#gramswasthya-chat-window {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+#gramswasthya-chat-window.active {
+    display: flex;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#gramswasthya-bot-header {
+    background: #0ea5e9;
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gramswasthya-bot-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#gramswasthya-bot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+#gramswasthya-bot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #f8fafc;
+}
+
+.bot-msg, .user-msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.bot-msg {
+    background: white;
+    color: #1e293b;
+    align-self: flex-start;
+    border: 1px solid #e2e8f0;
+    border-bottom-left-radius: 4px;
+}
+
+.user-msg {
+    background: #0ea5e9;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+#gramswasthya-bot-input-area {
+    padding: 12px;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#gramswasthya-bot-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+#gramswasthya-bot-input:focus {
+    border-color: #0ea5e9;
+}
+
+.gramswasthya-icon-btn {
+    background: #f1f5f9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+    transition: 0.2s;
+}
+
+.gramswasthya-icon-btn:hover {
+    background: #e2e8f0;
+    color: #0ea5e9;
+}
+
+#gramswasthya-bot-mic.listening {
+    background: #ef4444;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 400px) {
+    #gramswasthya-chat-window {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    #gramswasthya-bot-toggle { display: none; }
+}
